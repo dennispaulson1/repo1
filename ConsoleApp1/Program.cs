@@ -10,6 +10,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            //modosit
+            Console.WriteLine("Hello mivan?");
+            Console.ReadLine();
         }
     }
 }
