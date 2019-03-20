@@ -18,7 +18,11 @@ namespace ConsoleApp_receptek
         {
             // ha péntek van, akkor halas recept, egyébként pörkölt
 
-            if (DateTime.Today.DayOfWeek == DayOfWeek.Friday)
+            var maiNap = DateTime.Today;
+            var maiNapNeve = maiNap.DayOfWeek;
+            var maHalVan = DayOfWeek.Friday;
+
+            if (maiNapNeve == maHalVan)
             {
                 Console.WriteLine("halas étel hozzávalók");
             }
