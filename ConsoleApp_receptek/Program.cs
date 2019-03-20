@@ -16,7 +16,7 @@ namespace ConsoleApp_receptek
     {
         static void Main(string[] args)
         {
-            // ha péntek van, akkor halas recept, egyébként pörkölt
+            // ha péntek van, akkor halas recept, egyébként pörkölt 
 
             var maiNap = DateTime.Today;
             var maiNapNeve = maiNap.DayOfWeek;
