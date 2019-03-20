@@ -28,15 +28,20 @@ namespace ConsoleApp_receptek
             }
             else
             {
-                Console.WriteLine("Marhahús");
-                Console.WriteLine("Vöröshagyma");
-                Console.WriteLine("Olaj");
-                Console.WriteLine("Pirospaprika");
+                PorkoltRecept();
             }
 
-            
+
 
             Console.ReadLine();
+        }
+
+        private static void PorkoltRecept()
+        {
+            Console.WriteLine("Marhahús");
+            Console.WriteLine("Vöröshagyma");
+            Console.WriteLine("Olaj");
+            Console.WriteLine("Pirospaprika");
         }
     }
 }
