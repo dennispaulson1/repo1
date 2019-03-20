@@ -15,6 +15,8 @@ namespace ConsoleApp1
             //modosit 2
 
             //modosit3
+
+            //modosit4
             Console.WriteLine("Hello mivan?");
             Console.ReadLine();
         }
