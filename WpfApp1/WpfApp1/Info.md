@@ -1,6 +1,6 @@
-﻿## Tanfolyam kezdete
+﻿# Tanfolyam kezdete
 
-# Tanfolyam célja
+## Tanfolyam célja
 
 
 A tanfolyam a kezdők ....
