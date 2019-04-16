@@ -27,3 +27,5 @@ Kezdetben indulhatunk úgy, hogy a játék kezdőképernyője egyben az alkalmaz
 
 Fontos, hogy a lényeg a reakcióidő mérése, így nem gompokra, hanem  billenyűleütésekre tesszük a játékos reakcióit. Viszont érdemes megjeleníteni a lehetőségeket, erre jók a gombok.
 
+![játék képernyő](img/playdisplay.png)
+
