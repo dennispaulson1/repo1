@@ -24,5 +24,24 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void ShowNewCard_Click(object sender, RoutedEventArgs e)
+        {
+            // System.Diagnostics.Debug.WriteLine("Megnyomták a gombot");
+
+            // Kell egy 6 lapos kártya csomag
+
+            var card1 = FontAwesome.WPF.FontAwesomeIcon.Car;
+            var card2 = FontAwesome.WPF.FontAwesomeIcon.SnowflakeOutline;
+            var card3 = FontAwesome.WPF.FontAwesomeIcon.Briefcase;
+            var card4 = FontAwesome.WPF.FontAwesomeIcon.Book;
+            var card5 = FontAwesome.WPF.FontAwesomeIcon.Male;
+            var card6 = FontAwesome.WPF.FontAwesomeIcon.Female;
+
+            // Dobunk egy dobókockával
+
+            CardPlaceRight.Icon = card6;
+
+        }
     }
 }

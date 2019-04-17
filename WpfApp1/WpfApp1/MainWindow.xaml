@@ -20,7 +20,7 @@
 
         <!-- Fejléc -->
 
-            <StackPanel Grid.Row="0"
+        <StackPanel Grid.Row="0"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
                     Orientation="Horizontal"
@@ -44,50 +44,70 @@
 
         <!-- Kártyák -->
 
-        <fa:ImageAwesome Grid.Column="0" 
+        <fa:ImageAwesome x:Name="CardPlaceLeft" 
+                         Grid.Column="0" 
                          Grid.Row="1"
-                         Icon="SnowflakeOutline"
+                         Icon="None"
                          VerticalAlignment="Center"
                          HorizontalAlignment="Center"
                          Margin="20"
                          />
 
-        <fa:ImageAwesome Grid.Column="1" 
+        <fa:ImageAwesome x:Name="CardPlaceRight" 
+                         Grid.Column="1" 
                          Grid.Row="1"
-                         Icon="Automobile"
+                         Icon="None"
                          VerticalAlignment="Center"
                          HorizontalAlignment="Center"
                          Margin="20"
                          />
 
-        <!-- Lábléc -->
+        <Grid Grid.Row="2"
+              Grid.Column="0"
+              Grid.ColumnSpan="2" 
+              >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Lábléc -->
 
-        <Button Grid.Row="2" 
-                Grid.ColumnSpan="2" 
+            <Button Grid.Row="0"                
                 Grid.Column="0"
                 Content="Nem"
                 Padding="10"
                 Margin="10"
-                HorizontalAlignment="Left"
+                HorizontalAlignment="Center"
                 />
 
-        <Button Grid.Row="2" 
-                Grid.ColumnSpan="2" 
-                Grid.Column="0"
+            <Button Grid.Row="0"                 
+                Grid.Column="1"
                 Content="Igen"
                 Padding="10"
                 Margin="10"
-                HorizontalAlignment="Right"
+                HorizontalAlignment="Center"
                 />
 
-        <Button Grid.Row="2" 
-                Grid.ColumnSpan="2" 
-                Grid.Column="0"
+            <Button Grid.Row="0"                
+                Grid.Column="2"
                 Content="Részben"
                 Padding="10"
                 Margin="10"
                 HorizontalAlignment="Center"
                 />
+
+            <Button x:Name="ShowNewCard"
+                Grid.Row="0"                
+                Grid.Column="3"
+                Content="Új kártya"
+                Padding="10"
+                Margin="10"
+                HorizontalAlignment="Center" 
+                Click="ShowNewCard_Click"
+                />
+        </Grid>
 
     </Grid>
 </Window>
