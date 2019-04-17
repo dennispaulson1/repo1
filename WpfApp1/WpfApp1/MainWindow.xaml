@@ -4,30 +4,90 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="80*"/>
-            <RowDefinition Height="76*"/>
-            <RowDefinition Height="91*"/>
-            <RowDefinition Height="49*"/>
-            <RowDefinition Height="123*"/>
-        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="158*"/>
-            <ColumnDefinition Width="143*"/>
-            <ColumnDefinition Width="155*"/>
-            <ColumnDefinition Width="336*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Button" 
-                Grid.Column="2"
-                Grid.Row="1"
-                HorizontalAlignment="Stretch"
-                VerticalAlignment="Stretch"
-                Margin="5"
-                Padding="10" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-        </Button>
+        <!-- Fejléc -->
+
+            <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    >
+            <Label Content="Visszaszámolás: 00:55"
+                   Padding="10"
+                   Margin="10" 
+                   HorizontalAlignment="Left"/>
+
+            <Label Content="Pontszám: 56220"
+                   Padding="10"
+                   Margin="10" 
+                   HorizontalAlignment="Left"/>
+
+            <Label Content="oooo xi"
+                   Padding="10"
+                   Margin="10" 
+                   HorizontalAlignment="Left"/>
+        </StackPanel>
+
+        <!-- Kártyák -->
+
+        <fa:ImageAwesome Grid.Column="0" 
+                         Grid.Row="1"
+                         Icon="SnowflakeOutline"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
+                         Margin="20"
+                         />
+
+        <fa:ImageAwesome Grid.Column="1" 
+                         Grid.Row="1"
+                         Icon="Automobile"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
+                         Margin="20"
+                         />
+
+        <!-- Lábléc -->
+
+        <Button Grid.Row="2" 
+                Grid.ColumnSpan="2" 
+                Grid.Column="0"
+                Content="Nem"
+                Padding="10"
+                Margin="10"
+                HorizontalAlignment="Left"
+                />
+
+        <Button Grid.Row="2" 
+                Grid.ColumnSpan="2" 
+                Grid.Column="0"
+                Content="Igen"
+                Padding="10"
+                Margin="10"
+                HorizontalAlignment="Right"
+                />
+
+        <Button Grid.Row="2" 
+                Grid.ColumnSpan="2" 
+                Grid.Column="0"
+                Content="Részben"
+                Padding="10"
+                Margin="10"
+                HorizontalAlignment="Center"
+                />
+
     </Grid>
 </Window>
