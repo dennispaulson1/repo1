@@ -20,28 +20,47 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        int huzasokSzama = 0;
+        
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void ShowNewCard_Click(object sender, RoutedEventArgs e)
+        private void ShowNewCardButton_Click(object sender, RoutedEventArgs e)
         {
             // System.Diagnostics.Debug.WriteLine("Megnyomták a gombot");
 
+            huzasokSzama++;
+
+            if (huzasokSzama == 2)
+            {
+                PartiallyButton.IsEnabled = true;
+                YesButton.IsEnabled = true;
+                NoButton.IsEnabled = true;
+            }
+
             // Kell egy 6 lapos kártya csomag
 
-            var card1 = FontAwesome.WPF.FontAwesomeIcon.Car;
-            var card2 = FontAwesome.WPF.FontAwesomeIcon.SnowflakeOutline;
-            var card3 = FontAwesome.WPF.FontAwesomeIcon.Briefcase;
-            var card4 = FontAwesome.WPF.FontAwesomeIcon.Book;
-            var card5 = FontAwesome.WPF.FontAwesomeIcon.Male;
-            var card6 = FontAwesome.WPF.FontAwesomeIcon.Female;
+            var kartyak = new FontAwesome.WPF.FontAwesomeIcon[6];
+            kartyak[0] = FontAwesome.WPF.FontAwesomeIcon.Car;
+            kartyak[1] = FontAwesome.WPF.FontAwesomeIcon.SnowflakeOutline;
+            kartyak[2] = FontAwesome.WPF.FontAwesomeIcon.Briefcase;
+            kartyak[3] = FontAwesome.WPF.FontAwesomeIcon.Book;
+            kartyak[4] = FontAwesome.WPF.FontAwesomeIcon.Male;
+            kartyak[5] = FontAwesome.WPF.FontAwesomeIcon.Female;
 
             // Dobunk egy dobókockával
 
-            CardPlaceRight.Icon = card6;
+            var dobokocka = new Random();
+            var dobas = dobokocka.Next(0, 5);
 
+
+            // amelyik kártyát kijelöli a kocka, megjelenítjük a jobboldali kártyahelyen
+            CardPlaceRight.Icon = kartyak[dobas];
+
+            
         }
     }
 }
