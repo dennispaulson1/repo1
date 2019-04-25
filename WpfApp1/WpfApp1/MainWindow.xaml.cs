@@ -28,6 +28,7 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void ShowNewCardButton_Click(object sender, RoutedEventArgs e)
@@ -119,6 +120,11 @@ namespace WpfApp1
         private void AvalaszHelyes()
         {
             CardPlaceLeft.Icon = FontAwesomeIcon.Check;
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

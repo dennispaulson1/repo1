@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:WpfApp1"
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        MinHeight="440"
+        MinWidth="790"
+        Title="MainWindow" Height="450" Width="800" KeyDown="Window_KeyDown" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -73,6 +75,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <!-- Lábléc -->
+            
 
             <Button x:Name="NoButton"
                     Grid.Row="0"                
