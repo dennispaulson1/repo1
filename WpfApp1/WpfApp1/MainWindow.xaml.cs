@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FontAwesome.WPF;
 
 namespace WpfApp1
 {
@@ -22,7 +23,8 @@ namespace WpfApp1
     {
 
         int huzasokSzama = 0;
-        
+        FontAwesomeIcon elozoKartya = FontAwesomeIcon.None;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -32,13 +34,22 @@ namespace WpfApp1
         {
             // System.Diagnostics.Debug.WriteLine("Megnyomták a gombot");
 
+            UjKartyaHuzasa();
+
+        }
+        /// <summary>
+        /// Egy kocka dobása és új kártya húzása a dobás alapján
+        /// </summary>
+        private void UjKartyaHuzasa()
+        {
             huzasokSzama++;
 
             if (huzasokSzama == 2)
             {
-                PartiallyButton.IsEnabled = true;
+                //PartiallyButton.IsEnabled = true;   később ezt visszatesszük
                 YesButton.IsEnabled = true;
                 NoButton.IsEnabled = true;
+                ShowNewCardButton.IsEnabled = false;
             }
 
             // Kell egy 6 lapos kártya csomag
@@ -58,9 +69,56 @@ namespace WpfApp1
 
 
             // amelyik kártyát kijelöli a kocka, megjelenítjük a jobboldali kártyahelyen
+
+            elozoKartya = CardPlaceRight.Icon;
+
             CardPlaceRight.Icon = kartyak[dobas];
 
             
+        }
+
+        private void PartiallyButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void YesButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (elozoKartya == CardPlaceRight.Icon)
+            {
+                AvalaszHelyes();
+            }
+            else
+            {
+                AvalaszHelytelen();
+            }
+            UjKartyaHuzasa();
+        }
+
+        private void NoButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (elozoKartya == CardPlaceRight.Icon)
+            {
+                AvalaszHelytelen();
+            }
+            else
+            {
+                AvalaszHelyes();
+            }
+            UjKartyaHuzasa();
+
+        }
+
+        private void AvalaszHelytelen()
+        {
+            CardPlaceLeft.Icon = FontAwesomeIcon.Times;
+            
+        }
+
+        private void AvalaszHelyes()
+        {
+            CardPlaceLeft.Icon = FontAwesomeIcon.Check;
         }
     }
 }
