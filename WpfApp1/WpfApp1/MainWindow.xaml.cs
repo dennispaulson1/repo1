@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -85,6 +86,11 @@ namespace WpfApp1
 
         private void YesButton_Click(object sender, RoutedEventArgs e)
         {
+            YesAnswer();
+        }
+
+        private void YesAnswer()
+        {
             if (elozoKartya == CardPlaceRight.Icon)
             {
                 AvalaszHelyes();
@@ -98,7 +104,12 @@ namespace WpfApp1
 
         private void NoButton_Click(object sender, RoutedEventArgs e)
         {
+            NoAnswer();
 
+        }
+
+        private void NoAnswer()
+        {
             if (elozoKartya == CardPlaceRight.Icon)
             {
                 AvalaszHelytelen();
@@ -108,7 +119,6 @@ namespace WpfApp1
                 AvalaszHelyes();
             }
             UjKartyaHuzasa();
-
         }
 
         private void AvalaszHelytelen()
@@ -124,7 +134,21 @@ namespace WpfApp1
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
+            Debug.WriteLine(e.Key);
+            if (e.Key == Key.Left)
+            {
+                NoAnswer();
+            }
 
+            if (e.Key == Key.Right)
+            {
+                YesAnswer();
+            }
+
+            if (e.Key == Key.Down)
+            {
+
+            }
         }
     }
 }

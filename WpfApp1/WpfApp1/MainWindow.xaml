@@ -75,17 +75,24 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <!-- Lábléc -->
-            
+
 
             <Button x:Name="NoButton"
                     Grid.Row="0"                
-                    Grid.Column="0"
-                    Content="Nem"
+                    Grid.Column="0"                    
                     Padding="10"
                     Margin="10"
                     HorizontalAlignment="Center"
                     IsEnabled="False" Click="NoButton_Click"
-                />
+                >
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <fa:FontAwesome Icon="ArrowLeft" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Label Content="Nem" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                    </StackPanel>
+                </Button.Content>
+            </Button>                   
+                   
 
             <Button x:Name="YesButton"
                     Grid.Row="0"                 
